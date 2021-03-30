@@ -1,0 +1,47 @@
+version: '3.7'
+
+services:
+  vault:
+    container_name: vault
+    build:
+      context: ./vault
+      dockerfile: Dockerfile
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./vault/config:/vault/config
+      - ./vault/policies:/vault/policies
+      - ./vault/data:/vault/data
+      - ./vault/logs:/vault/logs
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+      - VAULT_API_ADDR=http://127.0.0.1:8200
+    command: server -config=/vault/config/vault-config.json
+    cap_add:
+      - IPC_LOCK
+
+  redis-server:
+    container_name: redis
+    image: 'redis'
+    ports:
+      - "6379:6379"
+
+  encryption-api:
+    container_name: encryptionApiBackend
+    build:
+      context: ./encryptionapi
+      dockerfile: Dockerfile
+    links:
+      - vault
+    ports:
+      - "4000:4000"
+  
+  encryptionapi-ui: 
+    container_name: encryptionApiFrontend
+    build:
+      context: ./encryptionApiUI
+      dockerfile: Dockerfile
+    links:
+      - vault
+    ports:
+      -"3000:3000"
