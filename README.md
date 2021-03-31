@@ -13,3 +13,8 @@ I am thinking of ways to create this as a image and developers can pull this ima
 Changes:-
 Dockerfile and docker-compose.yaml files get changed on server for security purpose and database configurations port numbers etc gets changed when this repo is cloned on server.
 
+
+for UI check this url:
+https://www.github.com/sarthaksingh18/encryptionapiui
+
+
