@@ -7,7 +7,7 @@ module.exports = {
         url: "http://vault:8200/v1/transit/encrypt/orders",
         port: 443,
         headers: {
-          "X-Vault-Token": "s.hlk42ytAOxfwnkE2HbB5OlGG",
+          "X-Vault-Token": "talking about this token",
           "Content-Type": "application/x-www-form-urlencoded",
         },
         form: {
@@ -35,7 +35,7 @@ module.exports = {
         url: "http://vault:8200/v1/transit/decrypt/orders",
         port: 443,
         headers: {
-          "X-Vault-Token": "s.hlk42ytAOxfwnkE2HbB5OlGG",
+          "X-Vault-Token": "this token",
           "Content-Type": "application/x-www-form-urlencoded",
         },
         form: {
