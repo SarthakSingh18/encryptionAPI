@@ -14,7 +14,7 @@ Changes:-
 Dockerfile and docker-compose.yaml files get changed on server for security purpose and database configurations port numbers etc gets changed when this repo is cloned on server.
 
 
-for UI check this url:
+for UI(website related code) check this url:
 https://www.github.com/sarthaksingh18/encryptionapiui
 
 
