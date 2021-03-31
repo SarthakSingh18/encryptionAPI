@@ -5,11 +5,11 @@ I have used vault for encryption as a service and created a node wrapper around 
 Tools and technologies used:-
 Nodejs,Express,docker-compose,vault by hashicorp,nginx,AWS-EC2,MongoDB,redis.
 
-Currently I am upgrading this service to provide cipher for large data like images and videos and creating microservices using golang and moving to k8s from docker-swarm.
+Currently I am upgrading this service to provide cipher for large data like images and videos and creating microservices using golang and moving to k8s from docker-swarm and using CI-CD pipeline.
 
 In Future:-
 I am thinking of ways to create this as a image and developers can pull this image configure it and get good cipher in less than 90ms.
 
 Changes:-
-Dockerfile and docker-compose.yaml files get changed on server for security purpose.
+Dockerfile and docker-compose.yaml files get changed on server for security purpose and database configurations port numbers etc gets changed when this repo is cloned on server.
 
