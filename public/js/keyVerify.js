@@ -5,7 +5,7 @@ exports.verifyApi = async (req, res, next) => {
       res.send({"error":"Must enter apikey in api header"}).status(500);
       return;
     }
-    const client = await MongoClient.connect('mongodb+srv://root:NAyxFXlSoOaliUFX@cluster0-3fupj.mongodb.net/test?retryWrites=true&w=majority');
+    const client = await MongoClient.connect('Hello');
     const db = client.db('api');
     const collection = db.collection("apiKeys");
     const data=await req.headers['apikey'];
